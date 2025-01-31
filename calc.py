@@ -114,6 +114,10 @@ def calc_MA2500(stock_code):
             recommend = "玩命"
         title = stock_name + "高于"+judge+"线" + ": " + recommend
 
+    
+    if len(result) < 2500:
+        title = title + f",当前{len(result)}天"
+
     #GENERATE TITLE
     # 斜杠用来代码换行
     text = date_today_str + stock_name + "收盘: " + str(close_today) +  \
